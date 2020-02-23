@@ -1,0 +1,188 @@
+body {
+    background: linear-gradient(48deg, #EECFBA, #C5DDE8);
+}
+
+header, .center {
+    padding: 16px;
+}
+
+footer {
+    padding-top: 30px;
+}
+
+div, p {
+    color: #f4feff;
+}
+
+div, p, a {
+    font-size: 1em;
+}
+
+a {
+    color: #f4feff;
+}
+
+a:hover, a:focus {
+    color: #5af0ff;
+}
+
+a.header__profile-link {
+    color: #adfaff;
+}
+
+a.header__profile-link:hover {
+    color: #f4feff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f4feff;
+    font-size: 1.3em;
+}
+
+label {
+    font-weight: bold;
+    color: #444;
+}
+
+.form-error {
+    color: #f8f8f8;
+}
+
+.header-line {
+    border-bottom: 1px solid rgba(50, 50, 50, 0.30);
+}
+
+.header__wrap, .content__wrap, .footer__wrap {
+    padding: 16px;
+    background-color: rgba(70, 70, 70, 0.30);
+    border-radius: 8px;
+    border: 1px solid rgba(65, 65, 65, 0.30);
+}
+
+.content__wrap {
+    min-height: 500px;
+}
+
+.header__appname {
+    font-weight: bold;
+    color: #f4feff;
+    font-size: 1.2em;
+}
+
+.header__appname:hover {
+    color: #adfaff;
+}
+
+.header__btn:hover {
+    border-color: #adfaff;
+}
+
+[type='text'], [type='password'],
+[type='date'], [type='datetime'],
+[type='datetime-local'], [type='month'],
+[type='week'], [type='email'],
+[type='number'], [type='search'],
+[type='tel'], [type='time'],
+[type='url'], [type='color'],
+textarea, .button, .header__btn {
+    background: rgba(70, 70, 70, 0.25);
+    border: 1px solid rgba(50, 50, 50, 0.30);
+    border-radius: 10px;
+    color: #f1f1f1;
+}
+
+[type='text']:focus, [type='password']:focus,
+[type='date']:focus, [type='datetime']:focus,
+[type='datetime-local']:focus, [type='month']:focus,
+[type='week']:focus, [type='email']:focus,
+[type='number']:focus, [type='search']:focus,
+[type='tel']:focus, [type='time']:focus,
+[type='url']:focus, [type='color']:focus,
+textarea:focus, .button:focus, .header__btn:focus {
+    background: rgba(50, 50, 50, 0.30);
+    border: 1px solid rgba(70, 70, 70, 0.25);
+    border-radius: 10px;
+    color: #f4feff;
+}
+
+.button {
+    color: #f4feff;
+    background: rgba(5, 5, 5, 0.40);
+}
+
+.button:hover, .header__btn:hover {
+    border-color: #adfaff;
+    color: #adfaff;
+    background-color: #555;
+}
+
+.header__btn {
+    background: rgba(50, 50, 50, 0.30);
+    border: 1px solid #f4feff;
+    margin-bottom: -1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.button {
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+#login-window, #profile-window {
+    display: block; top: 23px;
+    background-color: rgba(70, 70, 70, 0.30);
+    border: 1px solid rgba(50, 50, 50, 0.30);
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+#login-window {
+    width: 400px;
+}
+
+#profile-window {
+    width: 450px;
+}
+
+.tabs-content {
+    background: none;
+    border: none;
+}
+
+ul.tabs {
+    background-color: rgba(50, 50, 50, 0.30);
+    border: 1px solid rgba(50, 50, 50, 0.30);
+    border-bottom: 1px solid rgba(50, 50, 50, 0.30);
+}
+
+#login-tabs {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+li.tabs-title > a {
+    color: #f4feff;
+}
+
+li.tabs-title > a:hover, li.tabs-title > a:focus {
+    background-color: rgba(100, 100, 100, 0.25);
+    color: #5af0ff;
+}
+
+li.is-active > a[aria-selected='true'] {
+    background-color: rgba(50, 50, 50, 0.30);
+    border: none;
+    color: #f4feff;
+}
+
+li.login-window__first-tab > a {
+    border-top-left-radius: 8px;
+}
+
+.lang-icon > img {
+    margin-top: -3px;
+}

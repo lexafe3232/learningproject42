@@ -1,0 +1,37 @@
+{
+  "name": "sergey/test_authorization",
+  "description": "It just works",
+  "type": "project",
+  "license": "free",
+  "authors": [
+    {
+      "name": "Sergey",
+      "email": "s7beta@yandex.ru"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+      "sorskod/db": "1.*",
+    "aura/filter": "^2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Application\\": "Application/",
+      "Application\\Core\\": "Application/Core/",
+      "Application\\Models\\": "Application/Models/",
+      "Application\\Controllers\\": "Application/Controllers/",
+      "DbConnection\\": "Classes/DbConnection/",
+      "DBObjects\\": "Classes/DBObjects/",
+      "Users\\": "Classes/Users/",
+      "Registration\\": "Classes/Registration/",
+      "Authorization\\": "Classes/Authorization/",
+      "Encryption\\": "Classes/Encryption/",
+      "Validation\\": "Classes/Validation/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "Tests/"
+    }
+  }
+}
