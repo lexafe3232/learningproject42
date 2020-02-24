@@ -2,10 +2,10 @@
     <div class="login-window__tabs">
         <ul class="tabs" id="login-tabs" data-tabs="978k45-tabs" role="tablist" data-deep-link="true">
             <li class="tabs-title is-active login-window__first-tab" role="presentation">
-                <a href="#login" role="tab" id="login-label" aria-controls="login" aria-selected="true">Вход</a>
+                <a href="#login" role="tab" id="login-label" aria-controls="login" aria-selected="true"><?=$this->getStr('label_login'); ?></a>
             </li>
             <li class="tabs-title" role="presentation">
-                <a href="#register" role="tab" id="register-label" aria-controls="register" aria-selected="true">Регистрация</a>
+                <a href="#register" role="tab" id="register-label" aria-controls="register" aria-selected="true"><?=$this->getStr('label_registration'); ?></a>
             </li>
         </ul>
     </div>

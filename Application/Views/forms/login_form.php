@@ -1,13 +1,14 @@
-<h4 class="text-center">Авторизация</h4>
-<span class="form-error<? if ($this->isActiveError('auth_empty_data')): ?> is-visible<? endif; ?>">Необходимо ввести логин и пароль</span>
+<h4 class="text-center"><?=$this->getStr('label_authorization'); ?></h4>
+<span class="form-error<? if ($this->isActiveError('auth_error_empty_data')): ?> is-visible<? endif; ?>"><?=$this->getStr('error_auth_empty_data'); ?></span>
 <form method="post" name="login">
-    <label for="email">Email</label>
+    <label for="email"><?=$this->getStr('label_email'); ?></label>
     <input name="email" id="email" type="email" value="<?=$_POST['email']; ?>" />
-    <span class="form-error<? if ($this->isActiveError('auth_user_not_found')): ?> is-visible<? endif; ?>">Пользователь с указанным email не найден</span>
-    <label for="password">Пароль</label>
+    <span class="form-error<? if ($this->isActiveError('auth_invalid_email')): ?> is-visible<? endif; ?>"><?=$this->getStr('error_auth_invalid_email'); ?></span>
+    <span class="form-error<? if ($this->isActiveError('auth_user_not_found')): ?> is-visible<? endif; ?>"><?=$this->getStr('error_auth_user_not_found'); ?></span>
+    <label for="password"><?=$this->getStr('label_password'); ?></label>
     <input name="password" id="password" type="password" value="<?=$_POST['password']; ?>" />
-    <span class="form-error<? if ($this->isActiveError('auth_invalid_pass')): ?> is-visible<? endif; ?>">Неверный пароль</span>
+    <span class="form-error<? if ($this->isActiveError('auth_invalid_password')): ?> is-visible<? endif; ?>"><?=$this->getStr('error_auth_invalid_password'); ?></span>
     <div class="row column text-center">
-        <button type="submit" name="login_submit" value="true" class="button small-expanded">Войти</button>
+        <button type="submit" name="login_submit" value="true" class="button small-expanded"><?=$this->getStr('label_authorize'); ?></button>
     </div>
 </form>

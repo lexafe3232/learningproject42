@@ -47,6 +47,8 @@ class Controller_Authorize extends \Application\Core\Controller
             $data['errors'] = $result['errors'];
         }
 
+
+
         $this->view->generate('authorize.php', 'default.php', $data);
     }
 
