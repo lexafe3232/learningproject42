@@ -4,6 +4,8 @@
 namespace Application\Core;
 
 
+use Application\Languages\Language;
+
 class View
 {
     protected $errors = [];
@@ -11,7 +13,7 @@ class View
 
     function __construct()
     {
-        $this->language = $this->getLanguageObject();
+        $this->language = Language::getObject($_COOKIE['lang']);
     }
 
     public function generate($content_view, $template_view = 'default.php', $data = null)
@@ -40,20 +42,5 @@ class View
     public function getStr($string_name)
     {
         return $this->language->getString($string_name);
-    }
-
-    protected function getLanguageObject()
-    {
-        $lang = 'Russian';
-        $lang_class_ns = '\Application\Languages\\';
-
-        if (isset($_COOKIE['lang'])) {
-            if (class_exists($lang_class_ns.$_COOKIE['lang'])) {
-                $lang = $_COOKIE['lang'];
-            }
-        }
-
-        $class_name = $lang_class_ns.$lang;
-        return new $class_name();
     }
 }

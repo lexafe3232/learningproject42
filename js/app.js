@@ -1,5 +1,28 @@
 $(document).foundation();
 
+var lang =  $.cookie('lang');
+
+
+var requst_result = $.ajax({
+    url: '/ajax/request/',
+    method: 'POST',
+    data: {
+        action : 'getClientSideStrings',
+        lang : lang
+    },
+    dataType: 'json',
+    async: false
+}).responseJSON;
+
+var strings = [];
+if (requst_result.success == true) {
+    strings = requst_result.data;
+}
+
+function getStr(str_name) {
+    return strings[str_name];
+}
+
 $().ready(function() {
 
     $errorPlacement = function(error, element) {
@@ -23,13 +46,13 @@ $().ready(function() {
             },
             messages: {
                 email: {
-                    required: "Пожалуйста, введите E-mail",
-                    email: "Пожалуйста, введите корректный email-адрес"
+                    required: getStr('validate_empty_email'),
+                    email: getStr('validate_invalid_email')
                 },
                 password: {
-                    required: "Пожалуйста, введите пароль",
-                    minlength: "Пароль должен содержать не менее 6 символов",
-                    maxlength: "Пароль должен содержать не более 30 символов"
+                    required: getStr('validate_empty_password'),
+                    minlength: getStr('validate_invalid_password_min'),
+                    maxlength: getStr('validate_invalid_password_max')
                 }
             }
         });
@@ -64,28 +87,28 @@ $().ready(function() {
             },
             messages: {
                 reg_username: {
-                    required: "Пожалуйста, введите имя пользователя",
-                    minlength: "Имя пользователя должно содержать не менее 4 символов",
-                    maxlength: "Имя пользователя должно содержать не более 20 символов"
+                    required: getStr('validate_empty_username'),
+                    minlength: getStr('validate_invalid_username_min'),
+                    maxlength: getStr('validate_invalid_username_max')
                 },
                 reg_email: {
-                    required: "Пожалуйста, введите E-mail",
-                    email: "Пожалуйста, введите корректный email-адрес"
+                    required: getStr('validate_empty_email'),
+                    email: getStr('validate_invalid_email')
                 },
                 reg_password: {
-                    required: "Пожалуйста, введите пароль",
-                    minlength: "Пароль должен содержать не менее 6 символов",
-                    maxlength: "Пароль должен содержать не более 30 символов"
+                    required: getStr('validate_empty_password'),
+                    minlength: getStr('validate_invalid_password_min'),
+                    maxlength: getStr('validate_invalid_password_max')
                 },
                 reg_firstname: {
-                    required: "Пожалуйста, введите имя",
-                    minlength: "Поле Имя должно содержать не менее 4 символов",
-                    maxlength: "Поле Имя должно содержать не более 20 символов"
+                    required: getStr('validate_empty_firstname'),
+                    minlength: getStr('validate_invalid_firstname_min'),
+                    maxlength: getStr('validate_invalid_firstname_max')
                 },
                 reg_lastname: {
-                    required: "Пожалуйста, введите фамилию",
-                    minlength: "Поле Фамилия должно содержать не менее 4 символов",
-                    maxlength: "Поле Фамилия должно содержать не более 20 символов"
+                    required: getStr('validate_empty_lastname'),
+                    minlength: getStr('validate_invalid_lastname_min'),
+                    maxlength: getStr('validate_invalid_lastname_max')
                 }
             }
         });

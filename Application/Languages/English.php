@@ -51,4 +51,21 @@ class English extends Language
         'error_reg_upload_avatar_too_large' => 'File size must not exceed 4 MB',
         'error_reg_upload_avatar_error' => 'Failed to load avatar. Please try another image',
     ];
+
+    protected $stringsClient = [
+        'validate_empty_email' => 'Please enter an Email',
+        'validate_empty_username' => 'Please enter username',
+        'validate_empty_firstname' => 'Please enter your first name',
+        'validate_empty_lastname' => 'Please enter your last name',
+        'validate_empty_password' => 'Please enter password',
+        'validate_invalid_email' => 'Please enter a valid email address',
+        'validate_invalid_password_min' => 'Password must be at least 6 characters',
+        'validate_invalid_password_max' => 'Password must be 30 characters or less',
+        'validate_invalid_username_min' => 'Username must be at least 4 characters',
+        'validate_invalid_username_max' => 'Username must be 20 characters or less',
+        'validate_invalid_firstname_min' => 'First name must be at least 4 characters',
+        'validate_invalid_firstname_max' => 'Last name must be 20 characters or less',
+        'validate_invalid_lastname_min' => 'Last name must be at least 4 characters',
+        'validate_invalid_lastname_max' => 'Last name must be 20 characters or less'
+    ];
 }

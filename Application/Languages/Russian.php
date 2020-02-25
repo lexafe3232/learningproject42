@@ -51,4 +51,21 @@ class Russian extends Language
         'error_reg_upload_avatar_too_large' => 'Размер файла не должен превышать 4 Мб',
         'error_reg_upload_avatar_error' => 'Не удалось загрузить аватар. Пожалуйста, попробуйте другое изображение',
     ];
+
+    protected $stringsClient = [
+        'validate_empty_email' => 'Пожалуйста, введите E-mail',
+        'validate_empty_username' => 'Пожалуйста, введите имя пользователя',
+        'validate_empty_firstname' => 'Пожалуйста, введите имя',
+        'validate_empty_lastname' => 'Пожалуйста, введите имя',
+        'validate_empty_password' => 'Пожалуйста, введите пароль',
+        'validate_invalid_email' => 'Пожалуйста, введите корректный email-адрес',
+        'validate_invalid_password_min' => 'Пароль должен содержать не менее 6 символов',
+        'validate_invalid_password_max' => 'Пароль должен содержать не более 30 символов',
+        'validate_invalid_username_min' => 'Имя пользователя должно содержать не менее 4 символов',
+        'validate_invalid_username_max' => 'Имя пользователя должно содержать не более 20 символов',
+        'validate_invalid_firstname_min' => 'Поле Имя должно содержать не менее 4 символов',
+        'validate_invalid_firstname_max' => 'Поле Имя должно содержать не более 20 символов',
+        'validate_invalid_lastname_min' => 'Поле Фамилия должно содержать не менее 4 символов',
+        'validate_invalid_lastname_max' => 'Поле Фамилия должно содержать не более 20 символов'
+    ];
 }
