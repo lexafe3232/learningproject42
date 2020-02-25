@@ -24,11 +24,11 @@ class Controller_Authorize extends \Application\Core\Controller
         }
 
         if (isset($_POST['register_submit'])) {
-            $reg_data['username'] = trim($_POST['username']);
-            $reg_data['email'] = trim($_POST['email']);
-            $reg_data['password'] = trim($_POST['password']);
-            $reg_data['firstname'] = trim($_POST['firstname']);
-            $reg_data['lastname'] = trim($_POST['lastname']);
+            $reg_data['username'] = trim($_POST['reg_username']);
+            $reg_data['email'] = trim($_POST['reg_email']);
+            $reg_data['password'] = trim($_POST['reg_password']);
+            $reg_data['firstname'] = trim($_POST['reg_firstname']);
+            $reg_data['lastname'] = trim($_POST['reg_lastname']);
 
             $result = $this->register_model->register($reg_data);
         }
@@ -46,8 +46,6 @@ class Controller_Authorize extends \Application\Core\Controller
         } else {
             $data['errors'] = $result['errors'];
         }
-
-
 
         $this->view->generate('authorize.php', 'default.php', $data);
     }

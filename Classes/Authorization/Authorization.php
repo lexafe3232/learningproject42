@@ -20,7 +20,7 @@ class Authorization
                 $result['success'] = true;
             } else {
                 $result['success'] = false;
-                $result['errors'] = ['auth_invalid_pass'];
+                $result['errors'] = ['auth_invalid_password'];
             }
         } catch (\Exception $e) {
             $result['success'] = false;

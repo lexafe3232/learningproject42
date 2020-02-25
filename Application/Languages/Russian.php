@@ -20,8 +20,6 @@ class Russian extends Language
         'label_register' => 'Зарегистрироваться',
         'label_authorize' => 'Войти',
 
-        'label_upload_image' => 'Зарузить аватар',
-
         'label_user' => 'Пользователь',
         'label_username' => 'Имя пользователя',
         'label_email' => 'E-mail',
@@ -30,6 +28,9 @@ class Russian extends Language
         'label_lastname' => 'Фамилия',
         'label_reg_datetime' => 'Дата регистрации',
         'label_upd_datetime' => 'Дата обновления',
+
+        'label_upload_image' => 'Зарузить аватар',
+        'label_upload_avatar_format' => 'Допустимые форматы: JPEG, PNG, GIF. Размер изображения не должен превышать 4 МБ',
 
         'error_404' => 'Ошибка 404',
         'error_404_descr' => 'К сожалению, запрошення Вами страница не найдена.',
@@ -45,6 +46,9 @@ class Russian extends Language
         'error_reg_invalid_email' => 'E-mail должен соответствовать формату username@service.domain',
         'error_reg_invalid_password' => 'Пароль может состоять из букв и цифр, содержать не менее 6 и не более 30 символов',
         'error_reg_invalid_firstname' => 'Поле Имя должно содержать только буквы, не менее 4 и не более 20 символов',
-        'error_reg_invalid_lastname' => 'Поле Фамилия должно содержать только буквы, не менее 4 и не более 20 символов'
+        'error_reg_invalid_lastname' => 'Поле Фамилия должно содержать только буквы, не менее 4 и не более 20 символов',
+        'error_reg_upload_avatar_invalid_file' => 'Недопустимый формат файла',
+        'error_reg_upload_avatar_too_large' => 'Размер файла не должен превышать 4 Мб',
+        'error_reg_upload_avatar_error' => 'Не удалось загрузить аватар. Пожалуйста, попробуйте другое изображение',
     ];
 }

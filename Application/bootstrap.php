@@ -6,6 +6,8 @@ define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/Application/');
 define('CLASSES_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/Classes/');
 
 include ROOT.'/configs/db.php';
+include ROOT.'/configs/configs.php';
+
 include ROOT.'/vendor/autoload.php';
 
 \Application\Core\Route::start();

@@ -20,8 +20,6 @@ class English extends Language
         'label_register' => 'Register',
         'label_authorize' => 'Login',
 
-        'label_upload_image' => 'Upload avatar',
-
         'label_user' => 'User',
         'label_username' => 'Username',
         'label_email' => 'E-mail',
@@ -30,6 +28,9 @@ class English extends Language
         'label_lastname' => 'Lastname',
         'label_reg_datetime' => 'Registration date',
         'label_upd_datetime' => 'Update date',
+
+        'label_upload_image' => 'Upload avatar',
+        'label_upload_avatar_format' => 'Allowed formats: JPEG, PNG, GIF. Image size should not exceed 4 MB',
 
         'error_404' => '404 error',
         'error_404_descr' => 'Sorry, the page you requested was not found.',
@@ -45,6 +46,9 @@ class English extends Language
         'error_reg_invalid_email' => 'E-mail must conform to username@service.domain format',
         'error_reg_invalid_password' => 'Password can consist of letters and numbers, contain at least 6 and no more than 30 characters',
         'error_reg_invalid_firstname' => 'The Firstname field should contain only letters, not less than 4 and not more than 20 characters',
-        'error_reg_invalid_lastname' => 'The Lastname field should contain only letters, at least 4 and at most 20 characters'
+        'error_reg_invalid_lastname' => 'The Lastname field should contain only letters, at least 4 and at most 20 characters',
+        'error_reg_upload_avatar_invalid_file' => 'Invalid file format',
+        'error_reg_upload_avatar_too_large' => 'File size must not exceed 4 MB',
+        'error_reg_upload_avatar_error' => 'Failed to load avatar. Please try another image',
     ];
 }

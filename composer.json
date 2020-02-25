@@ -12,7 +12,8 @@
   "minimum-stability": "stable",
   "require": {
       "sorskod/db": "1.*",
-    "aura/filter": "^2.3"
+    "aura/filter": "^2.3",
+    "verot/class.upload.php": "^2.0"
   },
   "autoload": {
     "psr-4": {
