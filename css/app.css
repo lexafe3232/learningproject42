@@ -44,7 +44,7 @@ label {
     color: #444;
 }
 
-.form-error {
+.form-error, .error {
     color: #f8f8f8;
 }
 
