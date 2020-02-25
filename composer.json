@@ -27,7 +27,8 @@
       "Registration\\": "Classes/Registration/",
       "Authorization\\": "Classes/Authorization/",
       "Encryption\\": "Classes/Encryption/",
-      "Validation\\": "Classes/Validation/"
+      "Validation\\": "Classes/Validation/",
+      "Exceptions\\": "Classes/Exceptions/"
     }
   },
   "autoload-dev": {

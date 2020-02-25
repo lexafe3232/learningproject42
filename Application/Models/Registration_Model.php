@@ -29,6 +29,8 @@ class Registration_Model extends \Application\Core\Model
             }
         }
 
+
+
         if (count($result['errors']) == 0) {
             $result = Registration::register($reg_data);
             if ($result['success'] == true) {

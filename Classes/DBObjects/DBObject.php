@@ -3,8 +3,8 @@
 
 namespace DBObjects;
 
-use \Exceptions\DbException;
 use \DbConnection\DbConnection;
+use \Exceptions\DbObjectException;
 
 abstract class DBObject
 {
@@ -36,7 +36,7 @@ abstract class DBObject
 
             return $object;
         } else {
-            throw($e = new \Exception('User not found'));
+            throw($e = new DbObjectException('User not found'));
         }
     }
 
@@ -74,7 +74,7 @@ abstract class DBObject
         if (in_array($name, $this->fieldsList)) {
             $this->fields[$name] = $value;
         } else {
-            throw new \Exception('Undefiend field "' . $name . '"');
+            throw new DbObjectException('Undefiend field "' . $name . '"');
         }
     }
 

@@ -25,14 +25,18 @@ function getStr(str_name) {
 
 $().ready(function() {
 
-    $errorPlacement = function(error, element) {
+    errorPlacement = function(error, element) {
         error.attr('class', 'error form-error is-visible');
         error.insertAfter(element);
     };
+    errorHighlight = function(element, errorClass) {
+        $('label.form-error.is-visible[for="' + element.id + '"]').removeClass('is-visible');
+    }
 
     $(function(){
         $('#login_form').validate({
-            errorPlacement: $errorPlacement,
+            errorPlacement: errorPlacement,
+            highlight: errorHighlight,
             rules: {
                 email: {
                     required: true,
@@ -58,7 +62,8 @@ $().ready(function() {
         });
 
         $('#register_form').validate({
-            errorPlacement: $errorPlacement,
+            errorPlacement: errorPlacement,
+            highlight: errorHighlight,
             rules: {
                 reg_username: {
                     required: true,

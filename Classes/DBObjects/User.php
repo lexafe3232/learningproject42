@@ -4,6 +4,7 @@
 namespace DBObjects;
 
 use DbConnection\DbConnection;
+use \Exceptions\DbObjectException;
 
 class User extends DBObject
 {
@@ -27,7 +28,7 @@ class User extends DBObject
             $user = new \Users\User($fields);
             return $user;
         } else {
-            throw($e = new \Exception('User not found'));
+            throw($e = new DbObjectException('User not found'));
         }
     }
 
@@ -39,7 +40,7 @@ class User extends DBObject
             $user = new \Users\User($fields);
             return $user;
         } else {
-            throw($e = new \Exception('User not found'));
+            throw($e = new DbObjectException('User not found'));
         }
     }
 }
